@@ -38,9 +38,13 @@ class Session(models.Model):
     year = models.IntegerField(blank=False)
     name = models.TextField(blank=False)
 
+class CoTeam(models.Model):
+    cos = models.ManyToManyField(User, null=True, blank=False)
+    session = models.ForeignKey('Session', null=True, blank=False)
+
 class Program(models.Model):
     # Program info
-    volunteers = models.ManyToManyField(User, null=True)
+    owners = models.ForeignKey('CoTeam', null=True, blank=True)
     title = models.TextField(blank=False)
     summary = models.TextField(blank=True)
     session = models.ManyToManyField(Session, blank=True)
