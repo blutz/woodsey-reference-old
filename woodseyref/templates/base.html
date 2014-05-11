@@ -1,0 +1,22 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Woodsey Reference - UCLA UniCamp{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/app.css" />
+    <script src="{{ STATIC_URL }}js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    
+    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/vendor/jquery.js"><\/script>')</script>
+    <script src="{{ STATIC_URL }}js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    {% block extra-js %}{% endblock %}
+  </body>
+</html>
+

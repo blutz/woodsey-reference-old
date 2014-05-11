@@ -1,0 +1,10 @@
+#login-form {
+    margin-top:5%;
+}
+
+#login-form h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 9px;
+}
